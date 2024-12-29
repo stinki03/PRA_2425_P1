@@ -14,12 +14,16 @@ public:
     Rectangle();
     Rectangle(std::string color, Point2D* vertices);
     Rectangle(const Rectangle &r);
-    virtual void set_vertices(Point2D* vertices);  // Asegúrate de que esté marcado como virtual
+    virtual void set_vertices(Point2D* vertices);
     double area() const override;
     double perimeter() const override;
     void translate(double incX, double incY) override;
-    virtual void print() const override;  // Asegúrate de que esté marcado como virtual
+    virtual void print() const override;
     friend std::ostream& operator<<(std::ostream &out, const Rectangle &r);
+
+    // Nuevos métodos
+    Point2D get_vertex(int index) const;
+    Point2D operator[](int index) const;
 
 private:
     static bool check(Point2D* vertices);

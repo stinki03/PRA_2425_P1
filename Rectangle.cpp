@@ -74,3 +74,15 @@ bool Rectangle::check(Point2D* vertices) {
     return a == c && b == d;
 }
 
+// Implementación de los nuevos métodos
+Point2D Rectangle::get_vertex(int index) const {
+    if (index < 0 || index >= N_VERTICES) {
+        throw std::out_of_range("Index out of range");
+    }
+    return vs[index];
+}
+
+Point2D Rectangle::operator[](int index) const {
+    return get_vertex(index);
+}
+
