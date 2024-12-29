@@ -9,9 +9,9 @@ class List {
 	virtual void prepend(T e);
 	virtual T remove(int pos);
 	virtual T get(int pos);
-	virtual int search(T e)
+	virtual int search(T e);
 	virtual bool empty();
-	virtual size();
+	virtual int size();
    	// ... aquí los métodos virtuales puros
 };
 
