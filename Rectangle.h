@@ -14,11 +14,11 @@ public:
     Rectangle();
     Rectangle(std::string color, Point2D* vertices);
     Rectangle(const Rectangle &r);
-    void set_vertices(Point2D* vertices);
+    virtual void set_vertices(Point2D* vertices);  // Asegúrate de que esté marcado como virtual
     double area() const override;
     double perimeter() const override;
     void translate(double incX, double incY) override;
-    void print() const override;
+    virtual void print() const override;  // Asegúrate de que esté marcado como virtual
     friend std::ostream& operator<<(std::ostream &out, const Rectangle &r);
 
 private:
